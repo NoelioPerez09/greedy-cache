@@ -84,7 +84,7 @@ def main():
     lru_misses = LRU(k, m, requests)
     optff_misses = OPTFF(k, m, requests)
     
-    out_name = f'output/{sys.argv[1].split("/")[-1].split(".")[0]}.out'
+    out_name = f'../output/{sys.argv[1].split("/")[-1].split(".")[0]}.out'
     with open(out_name, "w") as file:
         file.write(f'FIFO  : {fifo_misses}\n')
         file.write(f'LRU   : {lru_misses}\n')
